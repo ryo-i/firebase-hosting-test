@@ -15,10 +15,11 @@
         const postBtn = document.querySelector('.postBtn');
         const ikkulist = document.querySelector('.ikkuList');
         const url = 'https://kumokotsu-test-default-rtdb.firebaseio.com/ikkuList';
+        const fullUrl = url + '.json';
 
         // Create
         const createFetch = () => {
-            const thisUrl = url + '.json'
+            const thisUrl = fullUrl;
             const data = {
                 ikku: postIkku.value
             };
@@ -65,8 +66,9 @@
 
 
         // Read
-        const readFetch = (url) => {
-            fetch(url).then((response) => {
+        const readFetch = () => {
+            const thisUrl = fullUrl;
+            fetch(thisUrl).then((response) => {
                 if(!response.ok) {
                     console.log('Read error!');
                     throw new Error('error');
@@ -81,9 +83,8 @@
                 console.log(error);
             });
         };
-
-        const thisUrl = url + '.json'
-        readFetch(thisUrl);
+        
+        readFetch();
 
 
         // Update
@@ -146,7 +147,9 @@
                 return response.json();
             }).then((data)  => {
                 const deleteId = thisId;
-                console.log('Delete ID->' + deleteId);
+                if (data === null) {
+                    console.log('Delete ID->' + deleteId);
+                }
                 thisLi.remove();
             }).catch((error) => {
                 console.log(error);
