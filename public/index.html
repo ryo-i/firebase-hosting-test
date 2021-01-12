@@ -36,6 +36,7 @@
         body, #message { margin-top: 0; background: white; box-shadow: none; }
         body { border-top: 16px solid #ffa100; }
       }
+      .menu {text-align: center}
     </style>
   </head>
   <body>
@@ -46,7 +47,7 @@
       <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
     </div>
     <p id="load">Firebase SDK Loading&hellip;</p>
-
+    <p class="menu">MEMU：<a href="db-test.html">CRUDテスト</a>｜<a href="fetch.html">FetchでCRUDテスト</a></p>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         const loadEl = document.querySelector('#load');
