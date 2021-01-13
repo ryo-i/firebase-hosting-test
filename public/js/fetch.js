@@ -146,9 +146,8 @@
                 console.log('Delete ok!');
                 return response.json();
             }).then((data)  => {
-                const deleteId = thisId;
                 if (data === null) {
-                    console.log('Delete ID->' + deleteId);
+                    console.log('Delete ID->' + thisId);
                 }
                 thisLi.remove();
             }).catch((error) => {
