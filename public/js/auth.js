@@ -14,12 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
             if (user) {
                 console.log('ログイン済み！');
                 if (pathname === '/login.html') {
-                    window.location = 'fetch.html';
+                    window.location.replace('fetch.html');
                 }  
             } else {
                 console.log('未ログイン！');
                 if (pathname === '/fetch.html') {
-                    window.location = 'login.html';
+                    window.location.replace('login.html');
                 } 
             }
         });
@@ -34,7 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
             firebase.auth().signInWithEmailAndPassword(emailVal, passVal)
             .then((user) => {
                 console.log('ログイン成功！');
-                loginCheck(user);
+                console.log(user);
+                loginCheck();
             })
             .catch((error) => {
                 const errorCode = error.code;
