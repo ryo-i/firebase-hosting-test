@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (logoutBtn) {
         logoutBtn.addEventListener( 'click', () => {
                 firebase.auth().signOut();
-                loginCheck(user);
+                loginCheck();
         }, false );
     }
 });
