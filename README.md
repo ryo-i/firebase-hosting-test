@@ -32,7 +32,3 @@
 
 プレビュー（Firebase）
 ※参考：[https://kumokotsu-test.firebaseapp.com/login.html]
-
-ゲストユーザー
-* E-mail: guest@guest.test
-* Pass: guest001
