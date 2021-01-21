@@ -25,3 +25,14 @@
 プレビュー（Firebase）
 ※参考：[https://kumokotsu-test.firebaseapp.com/fetch.html]
 
+## 【Firebase】Authenticationでログイン設定を作る（メール/パスワードによるユーザー認証）
+
+詳細（ブログ）
+※参考：[https://www.i-ryo.com/entry/2021/01/22/055042]
+
+プレビュー（Firebase）
+※参考：[https://kumokotsu-test.firebaseapp.com/login.html]
+
+ゲストユーザー
+* E-mail: guest@guest.test
+* Pass: guest001
